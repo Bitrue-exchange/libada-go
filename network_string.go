@@ -10,11 +10,13 @@ func _() {
 	var x [1]struct{}
 	_ = x[Testnet-0]
 	_ = x[Mainnet-1]
+	_ = x[Preprod-2]
+	_ = x[Preview-3]
 }
 
-const _Network_name = "TestnetMainnet"
+const _Network_name = "TestnetMainnetPreprodPreview"
 
-var _Network_index = [...]uint8{0, 7, 14}
+var _Network_index = [...]uint8{0, 7, 14, 21, 28}
 
 func (i Network) String() string {
 	if i >= Network(len(_Network_index)-1) {
